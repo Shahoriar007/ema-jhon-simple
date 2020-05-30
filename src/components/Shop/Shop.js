@@ -3,6 +3,7 @@ import fakeData from '../../fakeData';
 import { useState } from 'react';
 import './Shop.css';
 import Product from '../Product/Product';
+import Cart from '../Cart/Cart';
 
 const Shop = () => {
     const first10 = fakeData.slice(0, 10);
@@ -27,8 +28,7 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-                <h3>This is cart</h3>
-                <h5>Order Summery: {cart.length}</h5>
+                <Cart cart = {cart}></Cart>
             </div>
 
         </div>
