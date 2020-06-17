@@ -16,6 +16,7 @@ import Review from './components/Review/Review';
 import Inventory from './components/Inventory/Inventory';
 import Notfound from './components/Notfound/Notfound';
 import ProductDetail from './components/ProductDetail/ProductDetail';
+import Login from './components/Login/Login';
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route path="/product/:productKey">
             <ProductDetail></ProductDetail>
+          </Route>
+          <Route>
+            <Login></Login>
           </Route>
           <Route path="*">
               <Notfound></Notfound>
