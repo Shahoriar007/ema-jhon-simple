@@ -19,14 +19,22 @@ const Auth = () => {
             return res.user;
         })
         .catch(err => {
-            console.log(err);
             setUser(null);
             return err.mesage;
         })
     }
+    const signOut = () => {
+        firebase.auth().signOut().then(function() {
+            setUser(null);
+          }).catch(function(error) {
+            // An error happened.
+          });
+    }
+
     return{
         user,
-        signInWithGoogle
+        signInWithGoogle,
+        signOut
     }
 
 }
