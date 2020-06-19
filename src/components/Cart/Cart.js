@@ -1,9 +1,11 @@
 import React from 'react';
+import { useContext } from 'react';
+import { UserContext } from '../../App';
 
 
 const Cart = (props) => {
     const cart = props.cart;
-    //Total using reduce ..
+    const user = useContext(UserContext);
     //const total = cart.reduce((total, prd) => total + prd.price, 0);
 
     //Total another way..
@@ -41,6 +43,7 @@ const Cart = (props) => {
             {
                 props.children
             }
+            <p>{user}</p>
         </div>
     );
 };
